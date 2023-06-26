@@ -14,7 +14,8 @@ describe("async code", () => {
       done();
     });
   });
-  test("example of async with promises", () => {
-    return asyncPromise().then((result) => expect(result).toBe(true));
+  test("example of async with async await", async () => {
+    const result = await asyncPromise();
+    expect(result).toBe(true);
   });
 });
